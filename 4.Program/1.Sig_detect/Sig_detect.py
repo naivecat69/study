@@ -25,7 +25,6 @@ time_domain = args.time_domain
 
 
 
-
 class Signal:
     def __init__(self, sig, fs, dt):
         self.name = sig
@@ -160,6 +159,9 @@ class Signal:
         plt.show()
 
         print(f"True Rs: {Rs_true:.2f} Hz | Estimated Rs: {Rs_est:.2f} Hz | sps={sps}")
+
+    def test_func(self):
+        return 0
 
 
 
