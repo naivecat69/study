@@ -15,8 +15,8 @@ def poly_str(p: int, var: str = "x") -> str:
     if p == 0:
         return "0"
     terms = []
-    i = 0
     q = p
+    i = 0
     while q:
         if q & 1:
             if i == 0:
