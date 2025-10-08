@@ -8,6 +8,9 @@ class ViterbiDecoder:
     # 참고 사이트: http://www.ktword.co.kr/test/view/view.php?no=2500
     # MATLAB내 vitdec 함수를 참고하여 파이썬 형식으로 작성했습니다. MATLAB은 8진법으로 Generate Polynomial을 받기때문에
     # 해당 코드에도 8진법으로 받았습니다. 10진법으로 하길 윈허시면 하단 argparse부분 lambda 함수를 제거하시면 될겁니다.
+    # !!!!!
+    # NOTE!!! : 1/2 rate에서는 정상적으로 되는걸 봤는데 2/3 rate(punc included) 에서 시험은 아직 안해봤습니다...
+    # 나중에 여유될때 2/3 rate로 encoding된 샘플을 가지고 실험해보겠습니다.
     def __init__(self, args):
         # === self 변수 선언 === #
         # 파일 경로
@@ -163,7 +166,7 @@ if __name__ == '__main__':
     parser.add_argument('-punc', type=str, help="Puncture pattern (e.g., '1,1,1,0').")
 
     args = parser.parse_args()
-    #여기까지 argparse를 이용한 인자선언입니다
+    #~여기까지 argparse를 이용한 인자선언입니다
 
     decoder = ViterbiDecoder(args)
     decoder.decode()
