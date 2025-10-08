@@ -91,7 +91,7 @@ def create_test_files():
     # == 테스트 케이스 1: 100개의 Zero Bit ==
     TEST_FILE_1 = "encoded_zero_bits_test1.bin"
 
-    # 입력: 100개의 0 비트
+    # 입력: 100개의 1 비트
     input_bits_1 = [0] * 100
 
     # 인코딩 수행 (종결 비트 포함)
@@ -104,7 +104,7 @@ def create_test_files():
 
     # == 테스트 케이스 2: "Hello World!" ASCII ==
     TEST_FILE_2 = "encoded_helloworld_test2.bin"
-    ascii_string = "Hello World!"
+    ascii_string = "Nice To meet you!"
 
     # 문자열을 ASCII 코드 (바이트)로 변환 후 비트 리스트로 변환
     input_bytes_2 = ascii_string.encode('ascii')
